@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+    background-color: lightgray;
+    margin: 0;
+}
+img {
+  width: 25vw;/*sets the width as a percentage of the screen*/
+  height: 19vw;
+  object-fit: resize;
+  border-radius: 3%;
+
+}
+
+box_flex {
+    display: flex;
+    gap: 20px; /*gap between various flex items*/
+    flex-wrap: wrap;/* default is nowrap. wrap allows us to have multiple sub elements in the same line*/
+    border: 2px solid #333; /* Define border properties */
+    box-sizing: border-box; /* Include padding and border in the total width */
+    padding: 20px;
+    border-radius: 10px;
+    width: 125%;
+    margin: 10px;
+    background-color: white;
+}
+
+box_flex:hover{
+  box-shadow: 4px 4px 8px 0 rgba(2, 2, 6, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+box_flex_small {
+  display: flex;
+  gap: 20px; /*gap between various flex items*/
+  flex-wrap: wrap;/* default is nowrap. wrap allows us to have multiple sub elements in the same line*/
+  border: 2px solid #333; /* Define border properties */
+  box-sizing: border-box; /* Include padding and border in the total width */
+  padding: 20px;
+  border-radius: 10px;
+  width: 28vw;
+  margin: 10px;
+  margin-right: 5vw;
+  background-color: white;
+}
+
+h2{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1{
+    text-align: center; 
+    padding-top: 100px;
+    margin-bottom: 0px;   
+}
+.highlight{
+  background-color: white;
+  padding: 4px;
+}
+
+.container{
+
+    display: flex;
+    margin: 20px;
+    padding: 20px;
+}
+
+
+.box {
+    display:flex;
+    /* the image has to be in the same file as the code*/
+    border-radius: 3%;
+    border: 2px solid black;
+    width: 25vw;/*sets the width as a percentage of the screen*/
+    height: 19vw;
+    justify-content: center;
+    align-items:center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);/*shadow for box*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+  }
+.box:hover{
+    
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 20px 40px 0 rgba(0, 0, 0, 0.19);/*shadow for box*/
+  /*the 0.5 controls the transperancy of the shadow the 4 4 px does vertical and horitxontal shadoq*/
+
+}
+
+textbox {
+    border:2px solid orangered; 
+    border-radius: 5px;
+    background-color: white;
+    opacity: 1;
+    margin: 30px;
+    justify-content: center; /* Align horizontally (ie makes sure item is in the middle of horizontal)*/
+    /*if u dont specify width it automatically fills completely*/
+    height:auto;
+    width:auto;
+    opacity:0.5;
+    text-align: center;
+    
+}
+
+textbox:hover {
+    opacity: 1;
+}
+
+a{
+    font-weight: bold;
+    color: #000000;
+    font-size:larger ;
+    text-decoration: none;
+}
+
+.placeholder{
+    background-color: #000000;
+    height: 250px;
+    width: 250px;
+    
+} 
+
+.icon{
+    font-size: 27px;
+}
+
+.centre_item{
+    display:flex;
+    justify-content: center;
+    margin: 20px;
+    gap: 10px;
+}
+    
+.icon-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 25px;
+}
+
+
+.dropdown {
+
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  white-space: nowrap; /* Prevent text from wrapping */
+  max-width: 150px; /* Adjust the maximum width as needed */
+  overflow: hidden;
+  font-size: 20px;
+}
+
+.dropdown ul {
+  border-radius: 5px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.dropdown li {
+  padding: 5px 10px;
+}
+.dropdown li:hover{
+  background-color: beige;
+}/*if instead of li i used ul then all would*/
+
+.icon-container:hover .dropdown {
+  display: block;
+}
+
+.side_cont{
+  width: 30vw;
+}
+.paragraph {
+  border: 2px solid black;
+  border-radius: 8px;
+  background: transparent;
+  display: flex;
+  flex-direction: column; /* Adjust flex direction to stack elements vertically */
+  height: 200px;
+  padding: 10px 15px;
+  margin-top: 60px;
+  width: 200px;
+  text-align: center;
+  justify-content: center;
+  align-items: center; /* Center content vertically */
+}
+
+.proficiencies-heading {
+  margin-bottom: 10px; /* Add space between heading and horizontal line */
+}
+
+
+
+
+/*the code below will be for progress bar HEADER progress bar anD PROGRESS CONTAINER*/
+.header {
+  z-index: 1;
+  width: 100%;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: black;
+  width: 0%;
+}
+/* Rest of your CSS */
+
+
+
+.top-component{
+  
+  height: 65px;
+  transition: background-color 0.5s ease; /* Add a transition effect */
+  display: flex;
+  justify-content: space-between; /*It positions the child elements (flex items) with space distributed between them, pushing the first item to the start edge of the container and the last item to the end edge. */ 
+  align-items: center;
+}
+.top-name{
+
+}
+.hi-component{
+  height: 500px;
+  background-image: url(s_bg.jpg);  
+}
+nav {
+  margin-top: 28px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  margin-right: 30px;
+}
+
+#new {
+  position: relative; /* or any other initial position you want */
+  transition: background-color 0.5s ease; /* optional: add a smooth transition */
+  padding-bottom: 10px;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%; /* optional: make it full width */
+  background-color: white; /* or any other background color you want when fixed */
+}
+.name-text{
+font-family:'Shadows Into Light', cursive;
+margin-left: 15px;
+font-size: 45px;
+font-weight: 700;
+margin-top: 10px;
+}
+
+
+
+.bottom-component{
+  background-color: white;
+  height: 500px;
+  margin-top: 60px;
+
+}
+
+#bottom{
+  text-align: center;
+  padding-top: 150px;
+  font-size: 85px;
+
+}
+
+#left-align{
+  justify-content: flex-start;
+  margin-left: 100px;
+}
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.typewriter h1 {
+  color:black;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 50% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+#trans {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: lightgray;
+  padding: 10px;
+  transform: translateX(0); /* Initial position */
+  transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+/*we have mentioned placeholder after box because the class that is mentioned later overrides the one mentioned earlier*/
+
+/*a html alement can have 2 classes*/
+
+/* justify content centre allign items inside of a elemnt to the centre...say i have a container jiske andar justify 
+centre. then the elements inside the container willl be centre alligned*/
+
+/* display =  inline can prevent new line every time a new paragraph is started*/
