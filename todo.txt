@@ -1,5 +1,2 @@
-learn how things can be arrangeddynamically,where u dont have to use numvber 
-of pixels to create components
-
 //a fundamentally important way of thinking is 'think in components'
 

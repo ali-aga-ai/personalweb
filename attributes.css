@@ -4,15 +4,21 @@ html {
   scroll-behavior: smooth;
 }
 body {
-    background-color: lightgray;
+    background-color:darkgray;
     margin: 0;
 }
+
 img {
   width: 25vw;/*sets the width as a percentage of the screen*/
   height: 19vw;
   object-fit: resize;
   border-radius: 3%;
 
+}
+#icon{
+  width:2vw;
+  height: 2vw;
+  margin: 0.05vw;
 }
 
 box_flex {
@@ -48,8 +54,10 @@ box_flex_small {
 }
 
 h2{
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-left: .55vw;
+    text-align: left;
+    font-family: sans-serif;
+    font-size: 1.8vw;
 }
 h1{
     text-align: center; 
@@ -345,6 +353,12 @@ margin-top: 10px;
   padding: 10px;
   transform: translateX(0); /* Initial position */
   transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+#name-text{
+  color: #000000;
+}
+#nav{
+  color: black;
 }
 
 /*we have mentioned placeholder after box because the class that is mentioned later overrides the one mentioned earlier*/
