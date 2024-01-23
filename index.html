@@ -34,7 +34,7 @@
 
         <div class="row">
             <div class="column side">
-              <div class="box trans" id="trans"style="border-width:0; width: 20vw; margin-left: 3vw">
+              <div class="box trans" id="trans"style="border-width:0; width: 20vw; margin-left: 3vw" onclick="openModal()">
                 <div style="color: white;">Projects</div>
                 <i class="fa-solid fa-magnifying-glass-chart" style="color: #000000;"></i><div></div>
                 <i class="fa-solid fa-computer" style="color: #000000;"></i><div></div>
@@ -43,6 +43,20 @@
             </div>
         
 
+            <div id="emailModal" class="modal">
+              <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <form id="emailForm" action="https://formsubmit.co/d223b3f1af5402deaf12edf81c9189df" method="POST">
+                  <label for="name">Name:</label><br>
+                  <input type="text" id="name" name="name" required><br>
+                  <label for="email" >Email:</label><br>
+                  <input id="email" type = "email" placeholder="Email-ID" required><br>                  
+                  <label for="emailContent">Email Content:</label><br>
+                  <textarea id="emailContent" name="emailContent" required></textarea><br>
+                  <input type="submit" value="Submit">
+                </form>
+              </div>
+            </div>
 <!--u must place i between div otherwise it may not work-->
 
         <div class="column middle">
@@ -180,5 +194,6 @@
               </a>
           </div></div>
 
+          <script src="https://smtpjs.com/v3/smtp.js"></script>
     </body>
 </html>
